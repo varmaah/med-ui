@@ -1,0 +1,60 @@
+.image-container {
+    background-color: #8d42f5;
+  
+}
+
+.human-image {
+    padding-left:1rem;
+    padding-bottom: 0.2rem
+}
+
+.description {
+    /* should be replaced with image */
+    background-color: #42b0f5;
+}
+.description-content {
+    padding: 1rem;
+    color: #ffff
+}
+
+.description-content>h5 {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+
+.description-grid {
+    display: grid;
+    margin-top: 2.5rem;
+    grid-template-columns: auto auto auto;
+    grid-gap: 50px;
+}
+
+@media only screen and (max-width: 1000px) {
+    .description-grid {
+        grid-template-columns: auto auto;
+    }
+  }
+  @media only screen and (max-width: 370px) {
+    .description-grid {
+        grid-template-columns: auto;
+    }
+  }
+.description-grid-items {
+ padding :30px;
+ text-align: center;
+ color: rgba(63, 171, 228, 1);
+ background-color: #ffff;
+}
+
+.description-grid-items>h6 {
+ margin-top: 1rem;
+ text-align: center
+}
+
+.icon {
+    display: block;
+    width: 32px;
+    height: 32px;
+    margin: auto;
+    background: url('../../../assets/lifeline-in-a-heart-outline.png');
+}
