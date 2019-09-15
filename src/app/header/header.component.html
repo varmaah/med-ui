@@ -56,7 +56,7 @@
         id="offcanvas-toggler"
         class="d-md-none d-lg-none d-xl-none"
         aria-label="Menu"
-        href="#"
+        href="javaScript:void(0)" (click)="openSideNav()"
         ><i class="fa fa-bars" aria-hidden="true" title="Menu"></i
       ></a>
       <ul class="sp-megamenu-parent menu-fade d-none d-md-block">
@@ -249,3 +249,11 @@
     </div>
   </div>
 </nav>
+
+<div id="mySidenav" class="sidenav">
+    <a href="javascript:void(0)" class="closebtn" (click)="closeSideNav()">&times;</a>
+    <a href="#">About</a>
+    <a href="#">Services</a>
+    <a href="#">Clients</a>
+    <a href="#">Contact</a>
+  </div>
