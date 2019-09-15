@@ -1,0 +1,24 @@
+/* You can add global styles to this file, and also import other style files */
+.mr10 {
+    margin-right: 10px;
+}
+.ml10 {
+    margin-left: 10px;
+}
+.pb5 {
+    padding-bottom: 5px;
+}
+
+.pl10 {
+    padding-left: 10px;
+}
+
+.pr10 {
+    padding-right: 10px;
+}
+
+@media (min-width: 1200px){
+    .container {
+        max-width: 1170px;
+    }
+}
