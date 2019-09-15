@@ -1,0 +1,17 @@
+.card{
+ min-height :11rem;
+}
+
+.programs-grid {
+    display : grid;
+    grid-template-columns: 20% 80%;
+    grid-template-rows: 30% auto;
+    padding: 0.75rem;
+}
+.icon {
+    display: block;
+    width: 32px;
+    height: 32px;
+    background: url('../../assets/lifeline-in-a-heart-outline.png');
+}
+

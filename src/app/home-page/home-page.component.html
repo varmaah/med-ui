@@ -19,3 +19,18 @@
       <span class="sr-only">Next</span>
     </a>
   </div>
+  <div class="container mt-5">
+    <div class="row">
+      <div *ngFor="let program of programs" class="col-md-3">
+        <div class="card mt-3 mr-2">
+          <div class="programs-grid">
+            <div class="programs-grid-icon icon"></div>
+            <div class="programs-grid-item">
+              <h6 class="bold-text">{{program.title}}</h6>
+            </div>
+            <div class="programs-grid-item"></div>
+            <div class="programs-grid-item">{{program.description}}</div>
+          </div>
+        </div>
+      </div>
+    </div>
