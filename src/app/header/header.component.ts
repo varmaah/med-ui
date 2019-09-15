@@ -7,6 +7,8 @@ import { Component, OnInit, ViewChild, ElementRef, HostListener } from '@angular
 })
 export class HeaderComponent implements OnInit {
   // @ViewChild('firstDetails', {static: false}) private firstDetails: ElementRef;
+  @ViewChild('sideNav', {static: false}) sideNavRef : any;
+  @ViewChild('hamBurger', {static: false}) hamBurgerRef : any;
   headerGap: number;
   isScrolled = false;
 
@@ -14,13 +16,26 @@ export class HeaderComponent implements OnInit {
   @HostListener('window:scroll', ['$event']) onScrollEvent($event){
     // console.log($event['Window']);
      console.log("scrolling");
+     if( document.getElementById('navBar')) {
      if(document.documentElement.scrollTop > 50) {
       document.getElementById('navBar').classList.add('fixed-top');
      } else {
       document.getElementById('navBar').classList.remove('fixed-top');
      }
-     
+    }  
   }
+
+  @HostListener('document:click', ['$event.target'])
+  
+  public onClick(targetElement) {
+    const clickedInside = this.sideNavRef.nativeElement.contains(targetElement);
+    const isHamBurgerIconClicked = this.hamBurgerRef.nativeElement.contains(targetElement);
+
+    if (!clickedInside && !isHamBurgerIconClicked) {
+     this.closeSideNav();
+    }
+  }
+
 
   ngOnInit() {
 
