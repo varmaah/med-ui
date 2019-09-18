@@ -22,8 +22,14 @@
 .pr10 {
     padding-right: 10px;
 }
+.pt10 {
+    padding-top: 10px;
+}
 .pt15 {
     padding-top: 15px;
+}
+.pt25 {
+    padding-top: 25px;
 }
 .pb15 {
     padding-bottom: 15px;
@@ -35,6 +41,9 @@
 
 .mb30 {
     margin-bottom: 30px;
+}
+.mb15 {
+    margin-bottom: 15px;
 }
 
 @media (min-width: 1200px){
