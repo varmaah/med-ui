@@ -165,8 +165,11 @@ readonly services : any
         this.services.forEach(service => {
           if(service.id === queryParams['selectedServiceId'] ) {
             this.selectedService = service.serviceName;
+            this.routeParamTaken = true;
           }
         })
+      } else {
+        this.selectedService = this.services[0].serviceName;
       }
   }))
   }
