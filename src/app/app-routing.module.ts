@@ -8,7 +8,8 @@ const routes: Routes = [
   {path: 'contact-us' , loadChildren: () => import('src/app/contact-us/contact-us.module').then(mod => mod.ContactUsModule)},
   {path: 'med-services' , loadChildren: () => import('src/app/med-services/med-services.module').then(mod => mod.MedServicesModule)},
   {path: 'meet-dr' , loadChildren: () => import('src/app/meet-doctor/meet-doctor.module').then(mod => mod.MeetDoctorModule)},
-  {path: 'doctor-team' , loadChildren: () => import('src/app/doctor-team/doctor-team.module').then(mod => mod.DoctorTeamModule)}
+  {path: 'doctor-team' , loadChildren: () => import('src/app/doctor-team/doctor-team.module').then(mod => mod.DoctorTeamModule)},
+  {path: 'doctor-detail' , loadChildren: () => import('src/app/doctor-detail/doctor-detail.module').then(mod => mod.DoctorDetailModule)}
 ];
 
 @NgModule({

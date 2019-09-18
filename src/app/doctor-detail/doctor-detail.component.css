@@ -1,0 +1,29 @@
+.jd_member_addon {
+    width: 100%;
+    /* max-width: 360px; */
+    box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+}
+
+.jd_member_name {
+    font-size: 26px;
+    /* margin-top: 20px; */
+    line-height: normal;
+}
+.jd_member_info {
+    font-size: 16px;
+    padding-top: 10px;
+    line-height: normal;
+}
+
+.jd_section_heading {
+    font-size: 22px;
+    margin: 10px 0 15px;
+    color: #4593ff;
+    line-height: normal;
+}
+.signature {
+    font-family: Brush Script MT, cursive;
+    font-size: 35px;
+    font-weight: normal;
+    color: #4593ff;
+}

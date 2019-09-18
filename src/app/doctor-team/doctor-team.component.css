@@ -32,3 +32,15 @@
 .description:hover {
     bottom:0;
 }
+
+.jd_name {
+    font-size: 22px;
+}
+.jd_specialty {
+    font-size: 18px;
+    font-style: italic
+}
+
+.description a:hover {
+    text-decoration: none;
+}

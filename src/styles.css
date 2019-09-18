@@ -49,32 +49,21 @@
     margin-bottom: 15px;
 }
 
+.fs20 {
+    font-size: 20px;
+}
+
 @media (min-width: 1200px){
     .container {
         max-width: 1170px;
     }
 }
 
-/* #sp-page-title .sp-page-title {
-    padding: 40px 0;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-color: #4593ff;
-    background-image: url(../images/page_title_bg.png);
-} */
-
 .sp-page-title .breadcrumb {
     background: none;
     padding: 0;
     margin: 10px 0 0 0;
 }
-
-/* .container:before,
-.row:before {
-    display: table;
-    content: " ";
-} */
-
 
 .sp-page-title .breadcrumb >span, 
 .sp-page-title .breadcrumb >li, 
