@@ -1,3 +1,4 @@
+import { AppFooterModule } from './app-footer/app-footer.module';
 import { HeaderModule } from './header/header.module';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
@@ -14,7 +15,8 @@ import { ScrollToTopComponent } from './scroll-to-top/scroll-to-top.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HeaderModule
+    HeaderModule,
+    AppFooterModule
   ],
   providers: [],
   bootstrap: [AppComponent]
