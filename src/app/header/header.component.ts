@@ -73,7 +73,13 @@ export class HeaderComponent implements OnInit {
   }
 
   navigateToServices(id) {
-    this.router.navigate(['med-services'],{ queryParams: { selectedServiceId: id } })
+    this.router.navigate(['med-services'],{ queryParams: { selectedServiceId: id } });
   }
 
+  isLinkActive(url): boolean {
+    const queryParamsIndex = this.router.url.indexOf('?');
+    const baseUrl = queryParamsIndex === -1 ? this.router.url : 
+    this.router.url.slice(0, queryParamsIndex);
+    return baseUrl === url;
+ }
 }

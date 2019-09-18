@@ -266,10 +266,10 @@
   <div class="collapse navbar-collapse" id="navbarNavDropdown">
     <ul class="navbar-nav m-auto">
       <li class="nav-item">
-        <a class="nav-link" href="/home" routerLinkActive="active-link">Home<span class="sr-only">(current)</span></a>
+        <a class="nav-link"[routerLink]="['/home']" routerLinkActive="active-link">Home<span class="sr-only">(current)</span></a>
       </li>
       <li class="nav-item">
-        <a [routerLink]="['/meet-dr']" class="nav-link">Meet Dr.Vattam</a>
+        <a [routerLink]="['/meet-dr']" class="nav-link"  routerLinkActive="active-link">Meet Dr.Vattam</a>
       </li>
       <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" id="ourTeamMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -286,7 +286,7 @@
             </a>
             <div class="dropdown-menu services-list" aria-labelledby="servicesMenuLink">
               <ng-container *ngFor="let service of medicalServices">
-                  <a href="javaScript:void(0)" class="dropdown-item" (click)="navigateToServices(service.id)">{{service.serviceName}}</a>
+                  <a [routerLink]="['/med-services']"  [queryParams]="{ selectedServiceId: service.id }" routerLinkActive="active-link" class="dropdown-item">{{service.serviceName}}</a>
               </ng-container>
             </div>
           </li>
@@ -313,7 +313,7 @@
             </div>
           </li>
           <li class="nav-item">
-              <a class="nav-link" [routerLink]="['/contact-us']">Contact us</a>
+              <a class="nav-link" [routerLink]="['/contact-us']"  routerLinkActive="active-link">Contact us</a>
           </li>
     <!-- <li class="nav-item">
         <button class="btn  btn-primary" type="button">Request Appointment</button>

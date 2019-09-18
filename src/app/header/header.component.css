@@ -6,8 +6,16 @@
   display: block;
 }
 
+a {
+  color: black;
+}
+
+a:hover {
+  color: #4593ff 
+}
+
 .active-link {
-  color: #4593ff !important;
+  color: #4593ff 
 }
 
 .navbar-light .navbar-nav .nav-link:hover {
