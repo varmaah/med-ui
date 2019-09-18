@@ -10,7 +10,7 @@ import { ScrollToTopComponent } from './scroll-to-top/scroll-to-top.component';
 @NgModule({
   declarations: [
     AppComponent,
-    ScrollToTopComponent
+    ScrollToTopComponent,
   ],
   imports: [
     BrowserModule,
