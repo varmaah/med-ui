@@ -1,4 +1,6 @@
 import { Component, OnInit, ViewChild, ElementRef, HostListener } from '@angular/core';
+import { Router } from '@angular/router';
+import { getServices } from '../med-services/med-services.component';
 
 @Component({
   selector: 'app-header',
@@ -11,8 +13,9 @@ export class HeaderComponent implements OnInit {
   @ViewChild('hamBurger', {static: false}) hamBurgerRef : any;
   headerGap: number;
   isScrolled = false;
-
-  constructor() { }
+  medicalServices : any =[]
+  constructor(private router : Router) { 
+  }
   @HostListener('window:scroll', ['$event']) onScrollEvent($event){
     // console.log($event['Window']);
      console.log("scrolling");
@@ -38,7 +41,7 @@ export class HeaderComponent implements OnInit {
 
 
   ngOnInit() {
-
+    this.medicalServices = getServices();
     // $(document).ready(function() {
   
     //   $(window).scroll(function () {
@@ -62,11 +65,15 @@ export class HeaderComponent implements OnInit {
   }
 
    openSideNav() {
-    document.getElementById("mySidenav").style.width = "250px";
+    document.getElementById("mySidenav").style.width = "100%";
   }
   
    closeSideNav() {
     document.getElementById("mySidenav").style.width = "0";
+  }
+
+  navigateToServices(id) {
+    this.router.navigate(['med-services'],{ queryParams: { selectedServiceId: id } })
   }
 
 }

@@ -1,0 +1,49 @@
+.icon {
+    display: block;
+    width: 32px;
+    height: 32px;
+    margin: auto;
+    background: url('../../assets/lifeline-in-a-heart-outline.png');
+    padding: 1rem 0
+}
+
+.header {
+    padding: 1rem 0.5rem;
+    font-family: Lato, sans-serif;
+    font-size: 30px;
+    font-weight: normal
+}
+
+.description-grid {
+    display: grid;
+    grid-template-columns: 10% auto;
+    margin-top : 2rem;
+    margin-bottom: 2rem
+}
+
+.icon2 {
+    display: block;
+    width: 32px;
+    height: 32px;
+    background: url('../../assets/lifeline-in-a-heart-outline.png');
+    padding: 1rem 1rem;
+    text-align: center
+}
+
+.approach, .important-things {
+    margin-top: 2rem;
+}
+
+p {
+    font-family: Lato, sans-serif;
+    font-size: 16px;
+    font-weight: normal
+}
+
+.list-group-item:hover {
+    background-color: #a578ff
+}
+.selected-item {
+    background-color: #a578ff 
+}
+

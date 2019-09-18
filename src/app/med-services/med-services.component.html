@@ -1,3 +1,37 @@
-<p>
-  med-services works!
-</p>
+<div class="container">
+      <h3 class="text-center header">Our medical Services</h3>
+      <div class="icon text-center"></div>
+      <p class="text-center">one Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque. Duis vulputate commodo lectus, ac blandit elit tincidunt id</p>
+      <div class="row mt-5">
+        <div class="col-md-9">
+            <h3 class="text-center header">Important Things</h3>
+          <img class="img-fluid" src="../../assets/img3_Joom.jpg">
+          <ng-container *ngFor="let service of services">
+           <ng-container *ngIf="service.serviceName === selectedService">
+          <div class="description-grid">
+            <div class="grid-item icon2"></div>
+            <div class="grid-item">
+              <p>{{service.description_one}}</p>
+              <p>{{service.description_two}}</p>
+            </div>
+          </div>
+          <div class="approach">
+            <h3 class="header">Our Approach</h3>
+            <p>{{service.approach}}</p>
+          </div>
+          <div class="important-things">
+            <h3 class=" header">Important Things</h3>
+            <p>{{service.important_things}}</p>
+          </div>
+        </ng-container>
+      </ng-container>
+        </div>
+        <div class="col-md-3">
+          <ul class="list-group">
+            <ng-container *ngFor="let service of services">
+              <li class="list-group-item" [ngClass]="{'selected-item': service.serviceName === selectedService}" (click)="selectService(service.serviceName)">{{service.serviceName}}</li>
+            </ng-container>
+          </ul>
+        </div>
+      </div>
+</div>
