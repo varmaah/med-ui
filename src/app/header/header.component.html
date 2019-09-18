@@ -281,12 +281,12 @@
         </div>
       </li>
         <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" id="servicesMenuLink" [routerLink]="['/med-services']" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <a class="nav-link dropdown-toggle" id="servicesMenuLink" [routerLink]="['/med-services']"  routerLinkActive="active-link" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
             Services
             </a>
             <div class="dropdown-menu services-list" aria-labelledby="servicesMenuLink">
               <ng-container *ngFor="let service of medicalServices">
-                  <a [routerLink]="['/med-services']"  [queryParams]="{ selectedServiceId: service.id }" routerLinkActive="active-link" class="dropdown-item">{{service.serviceName}}</a>
+                  <a [routerLink]="['/med-services']"  [queryParams]="{ selectedServiceId: service.id }" class="dropdown-item">{{service.serviceName}}</a>
               </ng-container>
             </div>
           </li>
