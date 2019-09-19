@@ -1,12 +1,13 @@
 <div class="container">
-      <h3 class="text-center header">Our medical Services</h3>
-      <div class="icon text-center"></div>
-      <p class="text-center">one Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque. Duis vulputate commodo lectus, ac blandit elit tincidunt id</p>
-      <div class="row mt-5">
-        <div class="col-md-9">
-          <img class="img-fluid" src="../../assets/img3_Joom.jpg">
-          <ng-container *ngFor="let service of services">
-           <ng-container *ngIf="service.serviceName === selectedService">
+  <h3 class="text-center header">Our medical Services</h3>
+  <div class="icon text-center"></div>
+  <p class="text-center">one Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu
+    pharetra nec, mattis ac neque. Duis vulputate commodo lectus, ac blandit elit tincidunt id</p>
+  <div class="row mt-5">
+    <div class="col-md-9">
+      <iframe *ngIf="false" style="width: 100%; height:100%" src="../../assets/img3_Joom.jpg" frameborder="0"></iframe>
+      <ng-container *ngFor="let service of services">
+        <ng-container *ngIf="service.serviceName === selectedService">
           <div class="description-grid">
             <div class="grid-item icon2"></div>
             <div class="grid-item">
@@ -24,13 +25,18 @@
           </div>
         </ng-container>
       </ng-container>
-        </div>
-        <div class="col-md-3">
-          <ul class="list-group">
-            <ng-container *ngFor="let service of services">
-              <li class="list-group-item" [ngClass]="{'selected-item': service.serviceName === selectedService}" (click)="selectService(service.serviceName)">{{service.serviceName}}</li>
-            </ng-container>
-          </ul>
-        </div>
-      </div>
+    </div>
+    <div class="col-md-3">
+      <ul class="list-group">
+        <ng-container *ngFor="let service of services">
+          <li class="list-group-item" [ngClass]="{'selected-item': service.serviceName === selectedService}"
+            (click)="selectService(service.serviceName)">{{service.serviceName}}</li>
+        </ng-container>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<div class="container text-center mt30">
+    <button type="button" class="btn btn-primary" (click)="contactNav()">Contact us</button>
 </div>

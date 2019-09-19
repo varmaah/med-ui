@@ -1,7 +1,8 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router} from '@angular/router';
 import { Subscription } from 'rxjs';
 import { takeWhile } from 'rxjs/operators'
+
 
 
 
@@ -155,11 +156,12 @@ readonly services : any
  subscriptions = new Subscription();
  routeParamTaken = false;
 
- constructor(private route : ActivatedRoute) { 
+ constructor(private route : ActivatedRoute, private router: Router) { 
    this.services = getServices();
  }
 
   ngOnInit() {
+    window.scroll(0, 0);
     this.subscriptions.add(this.route.queryParams.pipe(takeWhile(() =>!this.routeParamTaken)).subscribe(queryParams => {
       if(queryParams['selectedServiceId']) {
         this.services.forEach(service => {
@@ -180,6 +182,11 @@ readonly services : any
 
   ngOnDestroy() {
     this.subscriptions.unsubscribe();
+  }
+
+  contactNav() {
+    this.router.navigate(['/' + 'contact-us']);
+    window.scroll(0, 0);
   }
 
 }

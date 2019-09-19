@@ -2,11 +2,11 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 
 @Component({
-  selector: 'app-doctor-detail',
-  templateUrl: './doctor-detail.component.html',
-  styleUrls: ['./doctor-detail.component.css']
+  selector: 'app-forms',
+  templateUrl: './forms.component.html',
+  styleUrls: ['./forms.component.css']
 })
-export class DoctorDetailComponent implements OnInit {
+export class FormsComponent implements OnInit {
 
   constructor(private router: Router) { }
 

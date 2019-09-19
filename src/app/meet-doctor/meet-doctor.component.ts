@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-meet-doctor',
@@ -23,9 +24,14 @@ export class MeetDoctorComponent implements OnInit {
      path: '../../assets/icon31.png'
    }];
 
-  constructor() { }
+  constructor(private router: Router) { }
 
   ngOnInit() {
+  }
+
+  contactNav() {
+    this.router.navigate(['/' + 'contact-us']);
+    window.scroll(0, 0);
   }
 
 }

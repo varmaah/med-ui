@@ -7,4 +7,14 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'med-project';
+
+  onActivate(e, scrollContainer) {
+    scrollContainer.scrollTop = 0;
 }
+
+onDeactivate() {
+  document.body.scrollTop = 0;
+}
+}
+
+

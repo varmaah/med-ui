@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-doctor-team',
@@ -19,9 +20,14 @@ readonly departments = [{
   description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque. Duis vulputate commodo lectus, ac blandit elit tincidunt id. '
 }
 ]
-  constructor() { }
+  constructor(private router: Router) { }
 
   ngOnInit() {
+  }
+
+  contactNav() {
+    this.router.navigate(['/' + 'contact-us']);
+    window.scroll(0, 0);
   }
 
 }

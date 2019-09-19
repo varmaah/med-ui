@@ -1,3 +1,4 @@
+import { Router } from '@angular/router';
 import { Component, OnInit } from '@angular/core';
 @Component({
   selector: 'app-home-page',
@@ -40,11 +41,16 @@ export class HomePageComponent implements OnInit {
     title : 'Heart Screening Surgery'
   }];
 
-  constructor() {
-   
+  constructor(private router: Router) {
+
    }
 
   ngOnInit() {
+  }
+
+  contactNav() {
+    this.router.navigate(['/' + 'contact-us']);
+    window.scroll(0, 0);
   }
 
 }
