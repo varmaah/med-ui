@@ -116,9 +116,47 @@
 
 
 <div id="mySidenav" #sideNav class="sidenav">
+  <div class="btn-container">
   <a href="javascript:void(0)" class="closebtn" (click)="closeSideNav()">&times;</a>
-  <a>About</a>
-  <a>Services</a>
-  <a>Clients</a>
-  <a>Contact</a>
+</div>
+
+<div class="links-container mt3">
+    <ul class="list-group">
+        <li class="list-group-item border-remove"> <a  [routerLink]="['/home']" routerLinkActive="active-link">Home<span
+          class="sr-only">(current)</span></a></li>
+        <li class="list-group-item  border-remove"><a [routerLink]="['/meet-dr']"  routerLinkActive="active-link">Meet Dr.Vattam</a></li>
+            <div id="accordion">
+                <div class="headingOne">
+                  <a data-toggle="collapse" class="collapsed" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                    Our Team <i class="fa pull-right"></i>
+                  </a>
+                <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordion">
+                  <ul class="list-group">
+                      
+                      
+                    <li class="list-group-item border-remove"><a [routerLink]="['/doctor-detail']">Doctor Detail</a></li>
+                    <li class="list-group-item border-0"><a [routerLink]="['/doctor-team']">Doctor Team</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <div id="accordion2">
+                <div class="headingOne">
+                  <a data-toggle="collapse" class="collapsed" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
+                    services  <i class="fa pull-right"></i>
+                  </a>
+                <div id="collapseTwo" class="collapse"  data-parent="#accordion2">
+                  <ul class="list-group">
+                      <ng-container *ngFor="let service of medicalServices; last as isLast">
+                          <li class="list-group-item" [ngClass]="{ 'border-remove' : !isLast }"><a [routerLink]="['/med-services']" [queryParams]="{ selectedServiceId: service.id }">{{service.serviceName}}</a></li>
+                        </ng-container>
+                  </ul>
+                </div>
+              </div>
+            </div>
+        <li class="list-group-item"><a  [routerLink]="['/contact-us']" routerLinkActive="active-link">Contact us</a></li>
+      </ul>
+</div>
+  
 </div>

@@ -88,11 +88,34 @@ a:hover {
   padding-top: 60px;
 }
 
-.sidenav a {
+.btn-container a {
   padding: 8px 8px 8px 32px;
   text-decoration: none;
   font-size: 25px;
   color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+.list-group-item {
+ border : 0
+}
+
+.border-remove {
+  border-bottom : 2px solid rgba(0,0,0,0.1);
+}
+.headingOne {
+  position: relative;
+    display: block;
+    padding: 0.75rem 1.25rem;
+    margin-bottom: -1px;
+    background-color: #fff;
+    border-bottom : 2px solid rgba(0,0,0,0.1);
+}
+
+.list-container a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
   display: block;
   transition: 0.3s;
 }
@@ -107,7 +130,12 @@ a:hover {
   right: 25px;
   font-size: 36px;
   margin-left: 50px;
+  background-color: #4593ff ;
+  text-align: center;
+  padding: 0 1rem;
+  margin-top: 0.5rem
 }
+
 
 .subLink:after {
   font-family: "FontAwesome";
@@ -123,4 +151,12 @@ a:hover {
 .subMenu {
   top: 0%;
   left: 100%;
+}
+
+[data-toggle="collapse"] .fa:before {   
+  content: "\f139";
+}
+
+[data-toggle="collapse"].collapsed .fa:before {
+  content: "\f13a";
 }

@@ -65,7 +65,7 @@ export class HeaderComponent implements OnInit {
   }
 
    openSideNav() {
-    document.getElementById("mySidenav").style.width = "30%";
+    document.getElementById("mySidenav").style.width = "50%";
   }
   
    closeSideNav() {
@@ -78,7 +78,6 @@ export class HeaderComponent implements OnInit {
 
  isActive(url) {
    if(this.router.url.includes(url)){
-     console.log('innnn')
      return 'active-link'
    }
  }
