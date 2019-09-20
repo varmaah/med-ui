@@ -1,4 +1,3 @@
-import { Doctor2DetailModule } from './../../.history/src/app/doctor2-detail/doctor2-detail.module_20190920105656';
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
