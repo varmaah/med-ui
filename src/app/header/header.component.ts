@@ -1,6 +1,7 @@
-import { Component, OnInit, ViewChild, ElementRef, HostListener } from '@angular/core';
-import { Router } from '@angular/router';
+import { Component, OnInit, ViewChild,HostListener } from '@angular/core';
+import { Router, NavigationEnd } from '@angular/router';
 import { getServices } from '../med-services/med-services.component';
+
 
 @Component({
   selector: 'app-header',
@@ -14,11 +15,11 @@ export class HeaderComponent implements OnInit {
   headerGap: number;
   isScrolled = false;
   medicalServices : any =[]
+  serviceActive = false;
   constructor(private router : Router) { 
-  }
+      
+    }
   @HostListener('window:scroll', ['$event']) onScrollEvent($event){
-    // console.log($event['Window']);
-     console.log("scrolling");
      if( document.getElementById('navBar')) {
      if(document.documentElement.scrollTop > 50) {
       document.getElementById('navBar').classList.add('fixed-top');
@@ -42,25 +43,14 @@ export class HeaderComponent implements OnInit {
 
   ngOnInit() {
     this.medicalServices = getServices();
-    // $(document).ready(function() {
-  
-    //   $(window).scroll(function () {
-    //       //if you hard code, then use console
-    //       //.log to determine when you want the 
-    //       //nav bar to stick.  
-    //       console.log($(window).scrollTop())
-    //     if ($(window).scrollTop() > 280) {
-    //       $('#nav_bar').addClass('navbar-fixed');
-    //     }
-    //     if ($(window).scrollTop() < 281) {
-    //       $('#nav_bar').removeClass('navbar-fixed');
-    //     }
-    //   });
-    // });
-    // setTimeout(() => {
-      
-    // this.headerGap = this.firstDetails.nativeElement.offsetHeight;
-    // }, 1000);
+    
+    this.router.events.subscribe(event  => {
+      if(event instanceof  NavigationEnd) {
+        if(!event.url.includes('med-services')) {
+          this.serviceActive = false;
+        }
+      }
+    });
     
   }
 
@@ -79,6 +69,12 @@ export class HeaderComponent implements OnInit {
  isActive(url) {
    if(this.router.url.includes(url)){
      return 'active-link'
+   }
+ }
+
+ test(rla) {
+   if(rla && rla.isActive) {
+    this.serviceActive = true;
    }
  }
 }
