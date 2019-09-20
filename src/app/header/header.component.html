@@ -51,7 +51,10 @@
               class="sr-only">(current)</span></a>
         </li>
         <li class="nav-item">
-          <a [routerLink]="['/doctor-detail']" class="nav-link" routerLinkActive="active-link">Meet Dr.Vattam</a>
+          <a [routerLink]="['/dr1-detail']" class="nav-link" routerLinkActive="active-link">Meet Dr.Vattam</a>
+        </li>
+        <li class="nav-item">
+          <a [routerLink]="['/dr2-detail']" class="nav-link" routerLinkActive="active-link">Meet Dr. Nocerini</a>
         </li>
 
         <li class="nav-item">
@@ -81,6 +84,7 @@
           </div>
         </li>
         <!-- do not remove below commented code -->
+
         <!-- <li class="nav-item dropdown">
 
             <a class="nav-link dropdown-toggle" id="servicesMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -119,7 +123,7 @@
 </nav>
 
 
-<div id="mySidenav" #sideNav class="sidenav">
+<div id="mySidenav" #sideNav class="sidenav d-lg-none d-xl-none">
   <div class="btn-container">
   <a href="javascript:void(0)" class="closebtn" (click)="closeSideNav()">&times;</a>
 </div>
@@ -128,8 +132,10 @@
     <ul class="list-group">
         <li class="list-group-item sidenav-links border-remove"  [routerLink]="['/home']" routerLinkActive="active-link" (click)="closeSideNav()">Home<span
           class="sr-only">(current)</span></li>
-        <li class="list-group-item sidenav-links  border-remove"[routerLink]="['/meet-dr']" routerLinkActive="active-link"  (click)="closeSideNav()">Meet Dr.Vattam</li>
-            <div id="accordion"  data-toggle="collapse" class="collapsed" data-target="#collapseOne">
+        <li class="list-group-item sidenav-links  border-remove"[routerLink]="['/dr1-detail']" routerLinkActive="active-link"  (click)="closeSideNav()">Meet Dr.Vattam</li>
+        <li class="list-group-item sidenav-links  border-remove"[routerLink]="['/dr2-detail']" routerLinkActive="active-link"  (click)="closeSideNav()">Meet Dr. Nocerini</li>
+        <li class="list-group-item sidenav-links  border-remove"[routerLink]="['/doctor-team']" routerLinkActive="active-link"  (click)="closeSideNav()">Doctor Team</li>
+            <!-- <div id="accordion"  data-toggle="collapse" class="collapsed" data-target="#collapseOne">
                 <div class="headingOne" [class.active-link]="rla1.isActive || rla2.isActive">
               
                     Our Team <i id="chev-icon" class="fa pull-right"></i></div>
@@ -140,7 +146,7 @@
                     <li class="list-group-item sidenav-links border-0" [routerLink]="['/doctor-team']"  routerLinkActive="active-link"   #rla2="routerLinkActive" (click)="closeSideNav()">Doctor Team</li>
                   </ul>
                 </div>
-            </div>
+            </div> -->
 
             <div id="accordion2" data-toggle="collapse" class="collapsed" data-target="#collapseTwo">
                

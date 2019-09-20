@@ -172,3 +172,10 @@ a:hover {
 [data-toggle="collapse"].collapsed .fa:before {
   content: "\f13a";
 }
+
+.list-group-item:hover {
+  cursor: pointer;
+}
+.headingOne:hover {
+  cursor: pointer;
+}

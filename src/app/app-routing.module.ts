@@ -1,3 +1,4 @@
+import { Doctor2DetailModule } from './../../.history/src/app/doctor2-detail/doctor2-detail.module_20190920105656';
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
@@ -9,8 +10,9 @@ const routes: Routes = [
   {path: 'med-services' , loadChildren: () => import('src/app/med-services/med-services.module').then(mod => mod.MedServicesModule)},
   {path: 'meet-dr' , loadChildren: () => import('src/app/meet-doctor/meet-doctor.module').then(mod => mod.MeetDoctorModule)},
   {path: 'doctor-team' , loadChildren: () => import('src/app/doctor-team/doctor-team.module').then(mod => mod.DoctorTeamModule)},
-  {path: 'doctor-detail' , loadChildren: () => import('src/app/doctor-detail/doctor-detail.module').then(mod => mod.DoctorDetailModule)},
-  {path: 'forms' , loadChildren: () => import('src/app/forms/forms.module').then(mod => mod.FormsModule)}
+  {path: 'dr1-detail' , loadChildren: () => import('src/app/doctor-detail/doctor-detail.module').then(mod => mod.DoctorDetailModule)},
+  {path: 'forms' , loadChildren: () => import('src/app/forms/forms.module').then(mod => mod.FormsModule)},
+  {path: 'dr2-detail' , loadChildren: () => import('src/app/doctor2-detail/doctor2-detail.module').then(mod => mod.Doctor2DetailModule)}
 ];
 
 @NgModule({
