@@ -120,9 +120,45 @@
 
 
 <div id="mySidenav" #sideNav class="sidenav">
+  <div class="btn-container">
   <a href="javascript:void(0)" class="closebtn" (click)="closeSideNav()">&times;</a>
-  <a>About</a>
-  <a>Services</a>
-  <a>Clients</a>
-  <a>Contact</a>
+</div>
+
+<div class="links-container mt3">
+    <ul class="list-group">
+        <li class="list-group-item sidenav-links border-remove"  [routerLink]="['/home']" routerLinkActive="active-link" (click)="closeSideNav()">Home<span
+          class="sr-only">(current)</span></li>
+        <li class="list-group-item sidenav-links  border-remove"[routerLink]="['/meet-dr']" routerLinkActive="active-link"  (click)="closeSideNav()">Meet Dr.Vattam</li>
+            <div id="accordion">
+                <div class="headingOne">
+                  <a data-toggle="collapse" class="collapsed" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                    Our Team <i id="chev-icon" class="fa pull-right"></i>
+                  </a>
+                <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordion">
+                  <ul class="list-group"> 
+                    <li class="list-group-item sidenav-links border-remove" [routerLink]="['/doctor-detail']" (click)="closeSideNav()">Doctor Detail</li>
+                    <li class="list-group-item sidenav-links border-0" [routerLink]="['/doctor-team']" (click)="closeSideNav()">Doctor Team</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <div id="accordion2">
+                <div class="headingOne">
+                  <a data-toggle="collapse" class="collapsed sidenav-links" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
+                    services  <i  id="chev-icon"  class="fa pull-right"></i>
+                  </a>
+                <div id="collapseTwo" class="collapse"  data-parent="#accordion2">
+                  <ul class="list-group">
+                      <ng-container *ngFor="let service of medicalServices; last as isLast">
+                          <li class="list-group-item sidenav-links" (click)="closeSideNav()" [ngClass]="{ 'border-remove' : !isLast }" [routerLink]="['/med-services']" [queryParams]="{ selectedServiceId: service.id }">{{service.serviceName}}</li>
+                        </ng-container>
+                  </ul>
+                </div>
+              </div>
+            </div>
+        <li class="list-group-item sidenav-links"  [routerLink]="['/contact-us']" routerLinkActive="active-link" (click)="closeSideNav()">Contact us</li>
+      </ul>
+</div>
+  
 </div>
