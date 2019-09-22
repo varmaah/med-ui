@@ -176,6 +176,7 @@ readonly services : any
 
   selectService(selection) {
     this.selectedService = selection;
+    window.scroll(0, 0);
   }
 
   ngOnDestroy() {
