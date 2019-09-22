@@ -148,9 +148,11 @@
                 </div>
             </div> -->
 
-            <div id="accordion2" data-toggle="collapse" class="collapsed" data-target="#collapseTwo">
-               
-                    <div class="headingOne" [class.active-link]="serviceActive">services  <i  id="chev-icon"  class="fa pull-right"></i></div>
+            <div id="accordion2">
+                <a class="services-link collapsed" data-toggle="collapse" data-target="#collapseTwo" href="#collapseTwo"> <span>services</span>
+                    <i  id="chev-icon"  class="fa pull-right"></i>
+                </a>
+                   <!-- <a  data-toggle="collapse" class="collapsed" data-target="#collapseTwo" href="#collapseTwo" [class.active-link]="serviceActive">services  <i  id="chev-icon"  class="fa pull-right"></i></a> -->
                 
                 <div id="collapseTwo" class="collapse"  data-parent="#accordion2">
                   <ul class="list-group">

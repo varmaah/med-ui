@@ -113,6 +113,12 @@ a:hover {
     border-bottom : 2px solid rgba(0,0,0,0.1);
 }
 
+.services-link {
+  display: block;
+  padding: 0.75rem 1.25rem;
+  text-decoration: none;
+  border-bottom : 2px solid rgba(0,0,0,0.1);
+}
 .headingOne:hover {
   color: #4593ff;
 }
@@ -124,9 +130,9 @@ a:hover {
   transition: 0.3s;
 }
 
-.sidenav a:hover {
+/* .sidenav a:hover {
   color: #f1f1f1;
-}
+} */
 
 .sidenav .closebtn {
   position: absolute;
