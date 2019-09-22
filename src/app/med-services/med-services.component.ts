@@ -154,7 +154,6 @@ readonly services : any
 
  selectedService :string;
  subscriptions = new Subscription();
- routeParamTaken = false;
 
  constructor(private route : ActivatedRoute, private router: Router) { 
    this.services = getServices();
@@ -162,12 +161,11 @@ readonly services : any
 
   ngOnInit() {
     window.scroll(0, 0);
-    this.subscriptions.add(this.route.queryParams.pipe(takeWhile(() =>!this.routeParamTaken)).subscribe(queryParams => {
+    this.subscriptions.add(this.route.queryParams.subscribe(queryParams => {
       if(queryParams['selectedServiceId']) {
         this.services.forEach(service => {
           if(service.id === queryParams['selectedServiceId'] ) {
             this.selectedService = service.serviceName;
-            this.routeParamTaken = true;
           }
         })
       } else {
