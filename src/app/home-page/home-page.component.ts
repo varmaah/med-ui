@@ -52,5 +52,13 @@ export class HomePageComponent implements OnInit {
     this.router.navigate(['/' + 'contact-us']);
     window.scroll(0, 0);
   }
+  goToTeam() {
+    this.router.navigate(['/' + 'doctor-team']);
+    window.scroll(0, 0);
+  }
+  goToDr1() {
+    this.router.navigate(['/' + 'dr1-detail']);
+    window.scroll(0, 0);
+  }
 
 }

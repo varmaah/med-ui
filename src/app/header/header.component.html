@@ -45,7 +45,7 @@
     <a #hamBurger id="offcanvas-toggler" class="d-lg-none d-xl-none" aria-label="Menu" href="javaScript:void(0)"
       (click)="openSideNav()"><i class="fa fa-bars" aria-hidden="true" title="Menu"></i></a>
     <div class="collapse navbar-collapse" id="navbarNavDropdown">
-      <ul class="navbar-nav m-auto">
+      <ul class="navbar-nav m-auto fw-600">
         <li class="nav-item">
           <a class="nav-link" [routerLink]="['/home']" routerLinkActive="active-link">Home<span
               class="sr-only">(current)</span></a>
@@ -129,12 +129,12 @@
 </div>
 
 <div class="links-container mt3">
-    <ul class="list-group">
-        <li class="list-group-item sidenav-links border-remove"  [routerLink]="['/home']" routerLinkActive="active-link" (click)="closeSideNav()">Home<span
+    <ul class="list-group fw-600">
+        <li class="list-group-item sidenav-links border-remove mobile-links"  [routerLink]="['/home']" routerLinkActive="active-link" (click)="closeSideNav()">Home<span
           class="sr-only">(current)</span></li>
-        <li class="list-group-item sidenav-links  border-remove"[routerLink]="['/dr1-detail']" routerLinkActive="active-link"  (click)="closeSideNav()">Meet Dr.Vattam</li>
-        <li class="list-group-item sidenav-links  border-remove"[routerLink]="['/dr2-detail']" routerLinkActive="active-link"  (click)="closeSideNav()">Meet Dr. Nocerini</li>
-        <li class="list-group-item sidenav-links  border-remove"[routerLink]="['/doctor-team']" routerLinkActive="active-link"  (click)="closeSideNav()">Doctor Team</li>
+        <li class="list-group-item sidenav-links  border-remove mobile-links"[routerLink]="['/dr1-detail']" routerLinkActive="active-link"  (click)="closeSideNav()">Meet Dr.Vattam</li>
+        <li class="list-group-item sidenav-links  border-remove mobile-links"[routerLink]="['/dr2-detail']" routerLinkActive="active-link"  (click)="closeSideNav()">Meet Dr. Nocerini</li>
+        <li class="list-group-item sidenav-links mobile-links"[routerLink]="['/doctor-team']" routerLinkActive="active-link"  (click)="closeSideNav()" style="border-bottom: 1px solid rgba(0,0,0,0.1) ">Doctor Team</li>
             <!-- <div id="accordion"  data-toggle="collapse" class="collapsed" data-target="#collapseOne">
                 <div class="headingOne" [class.active-link]="rla1.isActive || rla2.isActive">
               
@@ -149,7 +149,7 @@
             </div> -->
 
             <div id="accordion2">
-                <a class="services-link collapsed" data-toggle="collapse" data-target="#collapseTwo" href="#collapseTwo"> <span>services</span>
+                <a class="services-link collapsed mobile-links" data-toggle="collapse" data-target="#collapseTwo" href="#collapseTwo"> <span>services</span>
                     <i  id="chev-icon"  class="fa pull-right"></i>
                 </a>
                    <!-- <a  data-toggle="collapse" class="collapsed" data-target="#collapseTwo" href="#collapseTwo" [class.active-link]="serviceActive">services  <i  id="chev-icon"  class="fa pull-right"></i></a> -->
@@ -157,14 +157,14 @@
                 <div id="collapseTwo" class="collapse"  data-parent="#accordion2">
                   <ul class="list-group">
                       <ng-container *ngFor="let service of medicalServices; last as isLast">
-                          <li class="list-group-item sidenav-links" (click)="closeSideNav()" [ngClass]="{ 'border-remove' : !isLast }" [routerLink]="['/med-services']" [queryParams]="{ selectedServiceId: service.id }"
+                          <li class="list-group-item sidenav-links mobile-links child-link" (click)="closeSideNav()" [ngClass]="{ 'border-remove' : !isLast }" [routerLink]="['/med-services']" [queryParams]="{ selectedServiceId: service.id }"
                           routerLinkActive="active-link"  #rla3="routerLinkActive">{{service.serviceName}} {{test(rla3)}}</li>
                         </ng-container>
                   </ul>
                 </div>
               </div>
             
-        <li class="list-group-item sidenav-links"  [routerLink]="['/contact-us']" routerLinkActive="active-link" (click)="closeSideNav()">Contact us</li>
+        <li class="list-group-item sidenav-links mobile-links"  [routerLink]="['/contact-us']" routerLinkActive="active-link" (click)="closeSideNav()">Contact us</li>
       </ul>
 </div>
   
