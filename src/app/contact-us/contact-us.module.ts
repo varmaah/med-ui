@@ -10,7 +10,7 @@ import { AgmCoreModule } from '@agm/core';
     CommonModule,
     ContactUsRoutes,
     AgmCoreModule.forRoot({
-      apiKey: ''
+      apiKey: 'AIzaSyCS7p5nMmELpuIFsixbloMHKT1LfsUZhLk'
     })
   ],
   declarations: [ContactUsComponent]
