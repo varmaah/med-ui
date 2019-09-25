@@ -53,11 +53,19 @@ export class HomePageComponent implements OnInit {
     window.scroll(0, 0);
   }
   goToTeam() {
-    this.router.navigate(['/' + 'doctor-team']);
+    this.router.navigate(['/' + 'med-services']);
     window.scroll(0, 0);
   }
   goToDr1() {
     this.router.navigate(['/' + 'dr1-detail']);
+    window.scroll(0, 0);
+  }
+  goToServices() {
+    this.router.navigate(['/' + 'med-services']);
+    window.scroll(0, 0);
+  }
+  goToDr2() {
+    this.router.navigate(['/' + 'dr2-detail']);
     window.scroll(0, 0);
   }
 
