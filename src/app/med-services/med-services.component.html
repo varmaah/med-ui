@@ -25,7 +25,7 @@
 </section>
 
 <div class="container">
-  <h3 class="text-center header">Our medical Services</h3>
+  <!-- <h3 class="text-center header">Our medical Services</h3> -->
   <!-- <div class="icon text-center"></div> -->
   <!-- <p class="text-center">one Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu
     pharetra nec, mattis ac neque. Duis vulputate commodo lectus, ac blandit elit tincidunt id</p> -->
@@ -33,10 +33,14 @@
     <div class="col-md-9">
       <iframe *ngIf="false" style="width: 100%; height:100%" src="../../assets/img3_Joom.jpg" frameborder="0"></iframe>
       <ng-container *ngFor="let service of services">
-        <ng-container *ngIf="service.serviceName === selectedService">
+        <ng-container *ngIf="service.serviceName === selectedService">          
           <div class="description-grid">
+            <!-- <div>
+              {{selectedService}}
+            </div> -->
             <div class="grid-item icon2"></div>
             <div class="grid-item">
+                <div class="mb30"> <h4>{{selectedService}}</h4></div>
               <p [innerHTML]='service.description_one'></p>
               <p>{{service.description_two}}</p>
             </div>
