@@ -15,7 +15,7 @@
 }
 
 .description-grid {
-    display: grid;
+    /* display: grid; */
     grid-template-columns: 10% auto;
     margin-top : 2rem;
     margin-bottom: 2rem

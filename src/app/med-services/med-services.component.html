@@ -38,7 +38,7 @@
             <!-- <div>
               {{selectedService}}
             </div> -->
-            <div class="grid-item icon2"></div>
+            <!-- <div class="grid-item icon2"></div> -->
             <div class="grid-item">
                 <div class="mb30"> <h4>{{selectedService}}</h4></div>
               <p [innerHTML]='service.description_one'></p>
@@ -55,6 +55,15 @@
           </div> -->
         </ng-container>
       </ng-container>
+      <div *ngIf="selectedService === 'Superion'">
+        <video class="col-md-12 col-border p0" controls>
+          <source src="http://vertiflexapp.com/sites/default/files/2018-05/Superion-Patient-Education-v05_email.mp4" type="video/mp4">
+        </video>
+        <video class="col-md-12 mt30 col-border p0" controls>
+          <source src="http://vertiflexapp.com/sites/default/files/2018-05/Jeff_Vertiflex_Superion_Full_171030A_Email.mp4" type="video/mp4">
+        </video>
+      </div>
+      
     </div>
     <div class="col-md-3">
       <ul class="list-group">
